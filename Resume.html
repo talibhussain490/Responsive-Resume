@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+      body {
+        background-color: #1d678a;
+      }
+      main {
+        width: 70vw;
+        min-height: 100vh;
+        margin: 2rem auto;
+        background-color: #13232b;
+      }
+      .profile {
+        width: 100%;
+        padding: 1.5rem;
+        background-color: #0a2946;
+        display: grid;
+        place-items: center;
+      }
+      .developer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+      }
+      .developer-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .developer img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .developer .name {
+        font-size: 1.5rem;
+        color: #99a799;
+        text-transform: uppercase;
+      }
+      .developer .profession {
+        text-transform: uppercase;
+        letter-spacing: 0.14rem;
+        font-size: 1rem;
+        color: #737973;
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+      }
+      .left-section {
+        grid-column: 1/3;
+        background-color: #041c32;
+        padding: 1.5rem;
+      }
+      .contacts p {
+        color: #737973;
+      }
+      .about p {
+        color: #737973;
+      }
+      .sects {
+        margin-bottom: 2rem;
+      }
+      .title {
+        text-transform: uppercase;
+        color: #99a799;
+        font-size: 1.5rem;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      .title::after {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 3px;
+        top: 50%;
+        right: 0;
+        border-radius: 40px;
+        background-color: #99a799;
+      }
+      .skills label {
+        display: inline-block;
+        padding: 1px 5px;
+        margin: 3px;
+        background: #737973;
+        border-radius: 0.3rem;
+      }
+      .reference-sub-sections {
+        margin: 1rem 0;
+      }
+      .reference-sub-sections p {
+        color: #737973;
+      }
+      .right-section {
+        grid-column: 3/9;
+        padding: 1.5rem;
+      }
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .right-tl-content {
+        border-left: 1px solid #064663;
+        padding-left: 1rem;
+      }
+      .fa {
+        margin-right: 5px;
+      }
+      .tl-title {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #b0b9b0;
+      }
+      .tl-title-2,
+      .tl-title-3 {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #b0b9b0;
+      }
+      .tl-title-2::before {
+        content: "";
+        position: absolute;
+        height: 0.7rem;
+        width: 0.7rem;
+        border-radius: 50%;
+        background: #064663;
+        left: -22px;
+        top: 7px;
+      }
+      .para {
+        padding: 10px 0;
+        color: #737973;
+      }
+      footer {
+        width: 100%;
+        height: 3rem;
+        background: #041c32;
+        clip-path: polygon(0 1%, 80% 0, 100% 100%, 0% 100%);
+      }
+      @media only screen and (max-width: 1490px) {
+        .left-section {
+          grid-column: 1/4;
+        }
+        .right-section {
+          grid-column: 4/9;
+        }
+      }
+      @media only screen and (max-width: 1075px) {
+        main {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        .timeline {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .left-section {
+          grid-column: 1/5;
+        }
+        .right-section {
+          grid-column: 5/9;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .main-content {
+          display: flex;
+          flex-direction: column;
+        }
+        .profile {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        footer {
+          clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+        }
+      }
+      @media only screen and (max-width: 470px) {
+        .developer {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="profile">
+        <div class="developer">
+          <img src="Profile.jpg" alt="" />
+          <div class="developer-info">
+            <h2 class="name">Talib Hussain</h2>
+            <h3 class="profession">Front end engineer.</h3>
+          </div>
+        </div>
+      </section>
+      <section class="main-content">
+        <section class="left-section">
+          <div class="contacts sects">
+            <h3 class="title skill-title">Contact</h3>
+            <p>
+              <i class="fa fa-envelope-square"></i>talibhussain490@gmail.com
+            </p>
+            <p><i class="fa fa-phone-square"></i>7054246654</p>
+            <p><i class="fa fa-github-square"></i>Github</p>
+            <p><i class="fa fa-linkedin-square"></i>LinkedIn</p>
+          </div>
+          <div class="skills sects">
+            <h3 class="title skill-title">Skills</h3>
+            <label>JavaScript</label>
+            <label>HTML</label>
+            <label>CSS</label>
+            <label>React</label>
+            <label>Figma</label>
+            <label>SCSS</label>
+            <label>Git/Github</label>
+          </div>
+        </section>
+        <section class="right-section">
+          <div class="about sects">
+            <h3 class="title about-title">About</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Repellendus maiores aliquam omnis. Consequatur, illo similique quo
+              vitae accusamus incidunt perferendis<br /><br />
+              alias nemo, officia quisquam deleniti porro beatae itaque soluta
+              nostrum qui. Ullam fugit, magnam tempora possimus molestias in rem
+              odio eum blanditiis facere rerum a? Cum nesciunt culpa doloremque
+              inventore!
+            </p>
+          </div>
+          <div class="experience sects">
+            <h3 class="title experience-title">experience</h3>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Google</h5>
+                <p class="para">2020 - Present</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Senior Developer</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Apple</h5>
+                <p class="para">2019 - 2020</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Lead Developer</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Microsoft</h5>
+                <p class="para">2017 - 2019</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Junior Developer</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="education sects">
+            <h3 class="title education-title">education</h3>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Kurukshetra University</h5>
+                <p class="para">2016 - 2021</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Bachelor of technology</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Gbhs Nagam</h5>
+                <p class="para">2012 - 2015</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Non Medical</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="education sects">
+            <h3 class="title awards-title">awards</h3>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Microsoft</h5>
+                <p class="para">June - 2018</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">Excellent Work</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline">
+              <div class="left-tl-content">
+                <h5 class="tl-title">Google</h5>
+                <p class="para">Jan - 2020</p>
+              </div>
+              <div class="right-tl-content">
+                <div class="tl-content">
+                  <h5 class="tl-title-2">ABC Winner</h5>
+                  <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse tenetur doloremque enim ducimus debitis optio totam a
+                    sapiente veniam dicta?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
